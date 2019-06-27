@@ -1,0 +1,7 @@
+{
+  "name": "NoteMD",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

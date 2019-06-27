@@ -1,0 +1,14 @@
+<!--<ion-header>-->
+<!--  <ion-toolbar>-->
+<!--    <ion-title>master-detail-frame</ion-title>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+
+<!--<ion-content>-->
+
+<!--</ion-content>-->
+<ion-split-pane
+        (ionChange)="onSplitPaneChanged($event._visible)">
+  <router-outlet [name]="masterOutletName"></router-outlet>
+  <router-outlet [name]="detailOutletName" main></router-outlet>
+</ion-split-pane>

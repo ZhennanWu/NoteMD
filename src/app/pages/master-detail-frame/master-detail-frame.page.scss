@@ -1,0 +1,26 @@
+.split-pane-side:not(ion-menu) {
+  display: initial;
+}
+
+.split-pane-side:not(ion-menu).split-pane-show-detail:not(.split-pane-visible) {
+  display: none
+}
+
+.split-pane-main {
+  display: none;
+}
+
+.split-pane-main.split-pane-show-detail:not(.split-pane-visible) {
+  display: initial;
+}
+
+.split-pane-visible > .split-pane-main {
+  display: block;
+}
+
+/* .split-pane-visible > .split-pane-side:not(ion-menu) {
+  display: flex;
+}
+ */
+
+

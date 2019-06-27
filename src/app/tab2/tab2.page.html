@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text>
+    {{platform.platforms().concat()}} <br>
+    Is electron? {{platform.is("electron")}}<br>
+    Is desktop? {{platform.is("desktop")}}<br>
+    Is cordova? {{platform.is("cordova")}}<br>
+    Is capacitor? {{platform.is("capacitor")}}<br>
+    Is hybrid? {{platform.is("hybrid")}}<br>
+    {{this.cdvDevice.platform}}<br>
+    {{this.cdvDevice.model}}<br>
+    What
+  </ion-text>
+</ion-content>

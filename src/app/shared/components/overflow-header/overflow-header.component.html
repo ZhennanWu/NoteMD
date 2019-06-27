@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+
+    <ion-button *ngIf="navigateBackEnabled$ | async" slot="start">
+      <ion-icon slot="icon-only" name="Back"></ion-icon>
+    </ion-button>
+
+    <ion-buttons *ngIf="(menu$ | async).length!==0" slot="end">
+      <ion-button *ngFor="let menuItem of (displayedButtons$ | async)">
+        <ion-icon slot="icon-only" name="{{menuItem.icon}}"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="(overflowedButtons$ | async).length!==0">
+        <ion-icon slot="icon-only" name="Other options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+

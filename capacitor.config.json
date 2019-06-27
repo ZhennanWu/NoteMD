@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "NoteMD",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}
