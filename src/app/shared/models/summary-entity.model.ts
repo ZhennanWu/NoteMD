@@ -1,39 +1,37 @@
 import { Book } from './book.model';
 
-export class SummaryEntity {
-    type: 'root' | 'part' | 'seperator' | 'article' | 'section';
-}
+export type SummaryStructureEntity = SummaryRoot | SummaryPart | SummaryArticle;
 
-export class SummaryRoot extends SummaryEntity{
+export class SummaryRoot {
     type: 'root';
-    constructor(public book: Book){super();}
+    parent: Book;
 }
 
-export class SummaryPart extends SummaryEntity {
+export class SummaryPart {
     type: 'part';
     seperator: SummarySeperator;
+    parent: SummaryRoot;
     children: SummaryArticle[];
 }
 
-export class DisplayableSummaryEntity extends SummaryEntity {}
+export type SummaryDisplayEntity = SummarySeperator | SummaryArticle;
 
-export class SummarySeperator extends DisplayableSummaryEntity {
+export class SummarySeperator {
     type: 'seperator';
     title: string;
     parent: SummaryPart;
 }
 
-export class SummaryArticle extends DisplayableSummaryEntity {
+export class SummaryArticle {
     type: 'article';
     title: string;
     ref: string;
     parent: SummaryArticle | SummaryPart;
     children: Array<SummaryArticle>;
-
-    isSection(): boolean{
+    isSection(): boolean {
         return this.children.length === 0;
     }
-    isArticle(): boolean{
+    isArticle(): boolean {
         return !this.isSection();
     }
 }

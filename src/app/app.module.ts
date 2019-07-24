@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponentTestChange as AppComponent } from './app-component.component';
+import { File } from '@ionic-native/file/ngx';
+import { localFileServiceProvider, AppFileService } from './shared/services/file/app-file.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +18,10 @@ import { AppComponentTestChange as AppComponent } from './app-component.componen
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    File,
+    localFileServiceProvider,
+    AppFileService,
   ],
   bootstrap: [AppComponent]
 })
