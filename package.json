@@ -36,7 +36,7 @@
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "^2.2.0",
     "@types/fs-extra": "^8.0.0",
-    "codemirror": "^5.45.0",
+    "codemirror": "^5.58.2",
     "cordova-android": "8.0.0",
     "cordova-browser": "6.0.0",
     "cordova-electron": "1.0.2",
